@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # Параметры генерации
-terrain_width = 1000
-period = 50
-amp = 2
-octaves = 1
-noise = PerlinNoise(octaves=octaves, seed=4212132)
+terrain_width = 500
+period = 200
+amp = 6
+octaves = 4
+noise = PerlinNoise(octaves=octaves, seed=42132)
 
 # Генерация высот
 landscale = np.zeros((terrain_width, terrain_width))

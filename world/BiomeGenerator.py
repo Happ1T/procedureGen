@@ -16,7 +16,7 @@ class BiomeGenerator:
         self.assign_biomes()
 
     def relax_centers(self):
-        """Применяет алгоритм релаксации Ллойда к центрам биомов"""
+
         for _ in range(self.iterations):
             # Инициализация пустых зон для каждого центра
             regions = [[] for _ in range(self.num_biomes)]
@@ -34,7 +34,7 @@ class BiomeGenerator:
                     self.biome_centers[i] = Vec2(avg_x, avg_y)
 
     def assign_biomes(self):
-        """Присваивает каждому региону биом"""
+
         for i, center in enumerate(self.biome_centers):
             biome_type = self.biome_types[i % len(self.biome_types)]
             for x in range(self.map_size):
@@ -46,7 +46,7 @@ class BiomeGenerator:
                         self.biome_map[x][y] = biome_type
 
     def get_biome(self, x, z):
-        """Возвращает биом по координатам"""
+
         if 0 <= x < self.map_size and 0 <= z < self.map_size:
             return self.biome_map[x][z]
         return 'field'  # биом по умолчанию

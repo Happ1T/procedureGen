@@ -13,11 +13,11 @@ class WorldGeneratorObjects(Entity):
 
         self.seed_text = Text(
             text=f'Сид: {seed}',
-            position=(-0.7, 0.45),  # левый верхний угол (можешь подстроить под свой интерфейс)
+            position=(-0.7, 0.45),
             origin=(0, 0),
             scale=1.5,
             color=color.azure,
-            background=True  # можно убрать, если не хочешь фон
+            background=True
         )
         self.generated_entities = []
         self.block_map = set()
@@ -145,7 +145,7 @@ class WorldGeneratorObjects(Entity):
                             if min_dist < 10:
                                 count_of_boat = 1
                                 ship = Entity(
-                                    model='models/source/ship.fbx',  # Файл должен быть в папке models/
+                                    model='models/source/ship.fbx',
                                     texture = 'models/source/ship.fbm/dutch_ship_medium_rigging_diff_4k',
                                     double_sided = True,
                                     scale=0.01,

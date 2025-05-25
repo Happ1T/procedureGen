@@ -12,7 +12,7 @@ class WorldGenerator(Entity):
         self.seed = seed                     # Сид для воспроизводимого шума
         self.noise = PerlinNoise(octaves=4, seed=self.seed)  # Инициализируем шум Перлина
         self.center = self.map_size // 2     # Центр карты, используется для маски расстояния
-
+        self.max_height = max_height
         # Цвета блоков в зависимости от высоты
         self.block_colors = {
             'water': color.rgb(30, 120, 250),      # Низкие области — вода

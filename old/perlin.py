@@ -3,10 +3,10 @@ from perlin_noise import PerlinNoise
 import matplotlib.pyplot as plt
 
 # генерация основного шума и параметризация
-noise = PerlinNoise(octaves=2, seed=42132)
+noise = PerlinNoise(octaves=4, seed=42132)
 amp = 6
-period = 24
-terrain_width = 300
+period = 200
+terrain_width = 500
 
 #генерация матрицы для представления ландшафта
 landscale = [[0 for i in range(terrain_width)] for i in range(terrain_width)]
